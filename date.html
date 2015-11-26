@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+	function gdate(){
+		var d = new Date();
+		//获取当前年份
+		var y = d.getFullYear();
+		//获取当前月份
+		var m = d.getMonth();
+		//数组
+		var list = new Array();
+		//将当前年月插入数组
+		list[0] = y+"-"+m;
+		//再获取前五个月的
+		for(var i = 0; i < 5; i++){
+			m = m - 1;
+
+			//月份已小于1月份时候，获取去年12月份
+			if(m == 0){
+				y = y - 1;
+				m = 12;
+			}
+
+			list[i+1] = y+"-"+m;
+		}
+		document.write(list);
+	}
+	gdate();
+	
+</script>
+</body>
+</html>
