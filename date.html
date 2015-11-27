@@ -28,7 +28,11 @@
 
 			list[i+1] = y+"-"+m;
 		}
-		document.write(list);
+		// console.log(list);
+		// document.write(list);
+		var json = JSON.stringify(list);
+		return json;
+		alert(json);
 	}
 	gdate();
 	
