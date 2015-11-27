@@ -8,10 +8,13 @@
 
 	function gdate(){
 		var d = new Date();
+		console.log(d);
 		//获取当前年份
 		var y = d.getFullYear();
 		//获取当前月份
 		var m = d.getMonth();
+		//getMonth返回值是 0（一月） 到 11（十二月） 之间的一个整数
+		m = m + 1;
 		//数组
 		var list = new Array();
 		//将当前年月插入数组
@@ -29,10 +32,10 @@
 			list[i+1] = y+"-"+m;
 		}
 		// console.log(list);
-		// document.write(list);
-		var json = JSON.stringify(list);
-		return json;
-		alert(json);
+		document.write(list);
+		// var json = JSON.stringify(list);
+		// return json;
+		// alert(json);
 	}
 	gdate();
 	
